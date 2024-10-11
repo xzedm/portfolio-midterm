@@ -112,16 +112,22 @@ nav a {
 }
 
 }
-
+@media(max-width:1140px){
+  .family-member {
+    width: 400px;
+  }
+}
 @media(max-width: 950px){
-
+  .family-member{
+    width: 300px;
+  }
 }
 @media(max-width: 800px) {
   nav {
       font-size: 16px;
   }
 }
-@media(max-width: 730px) {
+@media(max-width: 740px) {
 
 nav .name-link {
   display: none;
@@ -129,13 +135,26 @@ nav .name-link {
 .links-container{
   justify-content: center;
 }
+.family-member{
+  width: 600px;
 }
+}
+
+@media(max-width:650px){
+  .family-member {
+    width: 500px;
+  }
+}
+
 @media(max-width: 600px){
 nav {
   font-size: 15px;
 }
 nav a {
   padding: 0 20px;
+}
+.family-member{
+  width: 400px;
 }
 }
 
@@ -175,5 +194,8 @@ nav a{
   top: 0;
   left: 0;
   z-index: 9;
+}
+.family-member{
+  width: 300px;
 }
 }
