@@ -11,6 +11,8 @@
   --color-2: #161617e0;
   --text-color: #f0f0f0;
   --accent-color: #0071E3;
+  --background-color: #494949;
+  --border-color: #979797;
 }
 *{
 margin: 0;
@@ -64,6 +66,125 @@ display: none;
 display: none;
 }
 
+.header {
+  width: 100%;
+  padding: 15px;
+  background: #333;
+  border-radius: 7px 7px 0 0;
+}
+
+.window {
+  width: 60vw;
+  background: var(--background-color);
+  height: 500px;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background: #FF5F56;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 7px;
+  stroke: #E0443E;
+  stroke-width: .5;
+  
+}
+
+.dot:nth-child(2) {  
+  background: #FFBD2E;
+}
+
+.dot:nth-child(3) {  
+  background: #27C93F;
+}
+
+
+.contact-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 21vw;
+  padding: 20px 50px;
+}
+.contact-input input {
+  border: none;
+  font-family: 'SFPro';
+  background-color: var(--background-color);
+  border-bottom: 2px solid var(--border-color);
+  height: 50px;
+  width: 15.6vw;
+  color: var(--border-color);
+  font-size: 1vw;
+  transition: .4s ease;
+}
+input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--accent-color);
+  color: var(--text-color);
+
+}
+::placeholder{
+  color: var(--border-color); 
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.contact-input h1 {
+  font-size: 2.5vw;
+  color: var(--text-color);
+  
+}
+.contact-inner {
+  display: flex;
+  align-items: center;
+}
+
+textarea {
+  background-color: white;
+  font-family: 'SFPro';
+  font-size: 1vw;
+  margin: 20px 0;
+  border-radius: 7px;
+  height: 100px;
+  padding: 5px;
+  resize: none;
+  outline: none;
+  color: var(--border-color);
+  width: 15.6vw;
+}
+
+.contact-button {
+  width: 100px;
+  border: 2px solid 	#A5C9FF;
+  background-color: transparent;
+  border-radius: 50px;
+  color: 	#A5C9FF;
+  height: 40px;
+  font-family: 'SFPro';
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+.contact-button:hover {
+  background-color: #A5C9FF;
+  color: var(--background-color);
+}
+.map iframe{
+  width: 21vw;
+  height: 15vw;
+  border-radius: 7px;
+}
 
 @media(max-width: 1200px) {
 nav {

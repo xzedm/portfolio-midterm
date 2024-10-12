@@ -74,7 +74,8 @@ display: none;
   text-align: center;
 }
 .family-member:hover {
-  box-shadow: 10px 10px 5px 0px grey;
+  /* box-shadow: 10px 10px 5px 0px grey; */
+  transform: scale(1.2);
 }
 .family img{
   width: 250px;
