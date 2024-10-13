@@ -8,7 +8,7 @@
 }
 :root{
   --color-1: #161617e0;
-  --color-2: #000000e0;
+  --color-2: rgba(22,22,23,.85);
   --text-color: #f0f0f0;
   --accent-color: #0071E3;
 }
@@ -79,6 +79,7 @@ display: none;
   font-size: 2.5rem;
   margin: 2rem 0;
   text-align: center;
+  font-family: 'SFProBold';
 
 }
 
@@ -87,12 +88,18 @@ display: none;
   display: flex;
   align-items: center;
   padding: 10px 0;
+
 }
 .school-info i{
   font-size: 2rem;
+  margin-right: 8px;
 }
 
 .timeline h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.timeline p {
   font-size: 1.2rem;
 }
 
@@ -132,6 +139,122 @@ display: none;
   top: 90px;
 }
 
+.achievments {
+  width: 80vw;
+  padding: 1.5rem 12% 0.7rem;
+  line-height: 40px;
+  margin-top: 20px;
+}
+.achievments h1 {
+  font-size: 2.5rem;
+  font-family: 'SFProBold';
+  margin-bottom: 20px;
+}
+.achievments p {
+  font-size: 1.5rem;
+}
+.achievments-items {
+  list-style-type: none;
+  padding: 0;
+}
+.achievments-items li {
+  position: relative;
+  padding-left: 25px; 
+  margin-bottom: 10px; 
+}
+
+.achievments-items li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 12px; 
+  height: 12px; 
+  background-color: black; 
+  border-radius: 50%; 
+}
+
+.skill-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.skill-icons i{
+  font-size: 6vw;  
+}
+
+.subjects-studied {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  padding: 0 12% 0;
+}
+
+.subjects-studied h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.subjects-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.subjects-table th,
+.subjects-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid var(--color-1);
+  font-size: 1.2em;
+}
+
+.subjects-table th {
+  background-color: var(--color-1);
+  color: white;
+  font-weight: bold;
+}
+
+.subjects-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.subjects-table td {
+  color: #333;
+}
+
+.subjects-table tr:hover {
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--color-1);
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-family: 'SFProBold';
+  gap: 10px;
+}
+footer img {
+  width: 50px;
+}
+
+main {
+  background-image: url(/img/abss.jpg);
+  background-size: cover;
+  height: auto;
+}
+
+.some-space {
+  padding-top: 50px;
+}
+
 /* Media queries */
 @media(max-width: 1200px) {
 nav {
@@ -140,15 +263,32 @@ nav {
 nav a {
     padding: 0 30px;
 }
-
+.timeline {
+  padding: 1rem 9% 0.7rem;
+}
 }
 
 @media(max-width: 950px){
-
+  .timeline {
+    padding: 1rem 5% 0.7rem;
+  }
 }
 @media(max-width: 800px) {
   nav {
       font-size: 16px;
+  }
+  .timeline-row {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  .skill-icons i{
+    font-size: 60px;
+  }
+  .subjects-studied h2 {
+    font-size: 2.5rem;
+  }
+  .subjects-table th, .subjects-table td {
+    padding: 10px;
+    font-size: 1rem;
   }
 }
 @media(max-width: 730px) {
@@ -205,5 +345,15 @@ nav a{
   top: 0;
   left: 0;
   z-index: 9;
+}
+.skill-icons i{
+  font-size: 10.465vw;
+}
+.timeline-row {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.subjects-studied {
+  padding: 0;
 }
 }
